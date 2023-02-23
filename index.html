@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>愛在西元前</title>
+    <style>
+        /* 歌詞樣式 */
+        .lyrics {
+            font-size: 20px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        /* 歌曲標題樣式 */
+        h1 {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        /* 歌詞重複部分樣式 */
+        .repeat {
+            font-size: 18px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>愛在西元前_歌詞自動修正版本</h1>
+    <div class="lyrics">
+        <p>古巴比倫王頒布了漢摩拉比法典</p>
+        <p>刻在黑色的玄武岩</p>
+        <p>距今已經 <span id="to-be-changed">三千七百多</span> 年</p>
+        <p>妳在櫥窗前 凝視碑文的字眼</p>
+        <p>我卻在旁靜靜欣賞妳那張我深愛的臉</p>
+        <p>祭司 神殿 征戰 弓箭 是誰的從前</p>
+        <p>喜歡在人潮中妳只屬於我的那畫面</p>
+        <p>經過蘇美女神身邊 我以女神之名許願</p>
+        <p>思念像底格里斯河般的蔓延</p>
+        <p>當古文明只剩下難解的語言</p>
+        <p>傳說就成了永垂不朽的詩篇</p>
+        <p>我給妳的愛寫在西元前</p>
+        <p>深埋在美索不達米亞平原</p>
+        <p>幾十個世紀後出土發現</p>
+        <p>泥板上的字跡依然清晰可見</p>
+        <p>我感到很疲倦離家鄉還是很遠</p>
+        <p>害怕再也不能回到你身邊</p>
+        <p>我給妳的愛寫在西元前</p>
+        <p>深埋在美索不達米亞平原</p>
+        <p>用楔形文字刻下了永遠</p>
+        <p>那已風化千年的誓言</p>
+        <p>一切又重演</p>
+
+
+        <p class="repeat">我感到很疲倦離家鄉還是很遠</p>
+        <p class="repeat">害怕再也不能回到你身邊</p>
+
+        
+        <p>我給妳的愛寫在西元前</p>
+        <p>深埋在美索不達米亞平原</p>
+        <p>幾十個世紀後出土發現</p>
+        <p>泥板上的字跡依然清晰可見</p>
+        <p>我給妳的愛寫在西元前</p>
+        <p>深埋在美索不達米亞平原</p>
+        <p>用楔形文字刻下了永遠</p>
+        <p>那已風化千年的誓言</p>
+        <p>一切又重演</p>
+
+        <p class="repeat">愛在西元前 愛在西元前</p>
+    </div>
+    <script type="module">
+        const dateBeforeChrist = new Date(-1754, 0, 1); // 西元前1754年1月1日
+        const now = new Date(); // 現在的日期
+
+        const diffInMilliseconds = now.getTime() - dateBeforeChrist.getTime(); // 計算兩個日期的毫秒差
+        const diffInYears = diffInMilliseconds / (1000 * 60 * 60 * 24 * 365.25); // 將毫秒差轉換為年數
+
+        console.log(`距離現在 ${diffInYears.toFixed(0)} 年`);
+
+        document.getElementById('to-be-changed').textContent = diffInYears.toFixed(0)
+
+    </script>
+</body>
+
+</html>
